@@ -11,35 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 public class TestServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-    public TestServlet2() {
-    	
-    }
-
-	
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
-		super.destroy();
+		System.out.println("Inside testservlet2 destroy method");
 	}
 
 
 	@Override
 	public void init() throws ServletException {
-		// TODO Auto-generated method stub
-		super.init();
+		System.out.println("Inside testservlet2 init method");
 	}
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("Inside testservlet doGet method");
-	}
-
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Inside testservlet doGet method");
-		doGet(request, response);
+		System.out.println("Inside testservlet2 doGet method");
 	}
 
 }
