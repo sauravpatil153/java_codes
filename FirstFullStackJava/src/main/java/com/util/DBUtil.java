@@ -12,7 +12,7 @@ public class DBUtil {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		System.out.println("Driver Loaded");
 
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3307/BankDb", "root", "root123");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3307/tutors", "root", "root123");
 		System.out.println("Connection Eshtabilished");
 	}
 
