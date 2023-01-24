@@ -1,7 +1,6 @@
 package dao;
 
 import java.util.List;
-
 import pojos.Department;
 import pojos.Employee;
 
@@ -11,5 +10,5 @@ public interface EmployeeDao {
 	
 	List<Employee> getEmployeesByDeptSal(Department dept, double sal);
 	
-	
+	List<Employee> getDetailsOfPermanentEmps();
 }

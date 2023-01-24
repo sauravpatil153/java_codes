@@ -58,6 +58,24 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		}
 		return employees;
 	}
+
+	@Override
+	public List<Employee> getDetailsOfPermanentEmps() {
+		List<Employee> employees = null;
+		Session session = getFactory().getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			String jpql = "select new pojos.Employee(empId,firstName,lastName,salary) from Employee e where e.isPermanent=true";
+			employees = session.createQuery(jpql, Employee.class)
+					.getResultList();
+			tx.commit();
+		} catch (RuntimeException e) {
+			if(tx!=null)
+				tx.rollback();
+			throw e;
+		}
+		return employees;
+	}
 	
 	
 
