@@ -93,4 +93,11 @@ public class Employee {
 	public void setIsPermanent(Boolean isPermanent) {
 		this.isPermanent = isPermanent;
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", firstName=" + firstName + ", lastName=" + lastName + ", department="
+				+ department + ", salary=" + salary + ", dob=" + dob + ", isPermanent=" + isPermanent + "]";
+	}
+	
 }
